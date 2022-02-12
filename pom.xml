@@ -11,7 +11,7 @@
 	<groupId>org.sda4sda</groupId>
 	<artifactId>beliefs.svc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Adventists Beliefs Domain Service</name>
+	<name>sda4sda Adventists Beliefs Domain Service</name>
 	<description>Core service logic for the sda4sda Adventists Beliefs Domain.</description>
 	<properties>
 		<java.version>1.8</java.version>
