@@ -1,10 +1,12 @@
 package org.sda4sda.beliefs.svc;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.stereotype.Repository;
 
 import reactor.core.publisher.Mono;
 
-public interface LocalizedValueRepository extends MongoRepository<LocalizedValue, String> {
+@Repository
+public interface LocalizedValueRepository extends ReactiveMongoRepository<LocalizedValue, String> {
 
   public Mono<LocalizedValue> findByLocaleAndKey(String locale, String key);
 

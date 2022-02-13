@@ -3,8 +3,9 @@ package org.sda4sda.beliefs.svc;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.index.CompoundIndexes;
-import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document
 @CompoundIndexes({
   @CompoundIndex(name = "locale_key", def = "{'locale': 1, 'key': 1}")
 })
@@ -14,10 +15,7 @@ public class LocalizedValue {
   public String id;
 
   public String locale;
-
-  @Indexed(unique = true)
   public String key;
-  
   public String value;
 
   public LocalizedValue() {}
