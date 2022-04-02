@@ -59,6 +59,6 @@ public class DoctrineSeeds {
 
 
 		// fetch all doctrines
-        return doctrineRepository.findAll()
+        return doctrineRepository.findAll();
 	}
 }
