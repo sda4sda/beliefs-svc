@@ -1,5 +1,6 @@
 package org.sda4sda.beliefs.svc;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import reactor.core.publisher.Flux;
@@ -12,6 +13,15 @@ public class DoctrineSeeds {
 	
 	// @Autowired
 	private LocalizedValueRepository localizedValueRepository;
+
+	@Autowired
+	public DoctrineSeeds(
+		LocalizedValueRepository localizedValueRepository, 
+		DoctrineRepository doctrineRepository
+	) {
+		this.localizedValueRepository = localizedValueRepository;
+		this.doctrineRepository = doctrineRepository;
+	}
 
 	public Flux<Doctrine> reseed(String... args) throws Exception {
 
